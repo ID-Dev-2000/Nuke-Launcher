@@ -92,6 +92,6 @@ launchButton.addEventListener('click', function() {
     targetParent.appendChild(nukeDrop)
 
     clearButton.addEventListener('click', function() {
-        targetParent.removeChild(nukeDrop)
+        targetParent.removeChild(nukeDrop) // replace with blank?
     })
 })
