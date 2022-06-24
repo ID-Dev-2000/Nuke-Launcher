@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUKE LAUNCHER</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1>NUKE LAUNCHER</h1>
+        <div class="coordinates">
+            <p>X: <span id="xCoord">0</span> - Y: <span id="yCoord">0</span></p>
+        </div>
+        <div class="targetParent" id="targetParent">
+            <div class="aimTarget" id="aimTarget" style="left: 0px; top: 0px;">
+                <div class="aimReticle"></div>
+            </div>
+        </div>
+        <div class="buttonParent">
+            <div>
+            <button id="leftButton">Left</button>
+            <button id="rightButton">Right</button>
+            </div>
+            <div>
+            <button id="downButton">Down</button>
+            <button id="upButton">Up</button>
+            </div>
+        </div>
+        <button class="launchButton" id="launchButton">LAUNCH</button>
+        <button class="clearButton" id="clearButton">CLEAR</button>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+@import url(background.css);
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Source Code Pro', monospace;
+    padding: 10px;
+    background-color: darkolivegreen;
+    margin-bottom: 5px;
+}
+
+button {
+    font-family: 'Source Code Pro', monospace;
+    height: 40px;
+    width: 80px;
+    background-color: rgb(107, 155, 35);
+    border: 3px solid black;
+    padding: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: rgb(90, 131, 29);
+}
+
+.buttonParent {
+    margin-top: 5px;
+    background-color: darkolivegreen;
+}
+
+.coordinates {
+    font-family: 'Source Code Pro', monospace;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 175px;
+    height: 50px;
+    background-color: darkolivegreen;
+}
+
+.targetParent {
+    position: relative;
+    width: 1000px;
+    height: 500px;
+    border: 3px solid darkolivegreen;
+    background-image: url('world-map.png');
+    background-size: 100% 100%;
+}
+
+.aimTarget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 30px;
+    border: 2px dotted black;
+}
+
+.aimReticle {
+    width: 5px;
+    height: 5px;
+    border-radius: 10px;
+    border: 2px solid red;
+}
+
+.generalP {
+    margin: 5px;
+}
+
+.launchButton {
+    width: 204px;
+    height: 50px;
+    margin-bottom: 2px;
+}
+
+.clearButton {
+    margin-top: 2px;
+    width: 204px;
+    height: 50px;
+}
