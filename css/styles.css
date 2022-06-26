@@ -1,4 +1,4 @@
-@import url(background.css);
+@import url(../css/background.css);
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
 main {
@@ -13,6 +13,7 @@ h1 {
     padding: 10px;
     background-color: darkolivegreen;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 button {
@@ -51,7 +52,7 @@ button:active {
     width: 1000px;
     height: 500px;
     border: 3px solid darkolivegreen;
-    background-image: url('world-map.png');
+    background-image: url('../image/world-map.png');
     background-size: 100% 100%;
 }
 
@@ -87,4 +88,11 @@ button:active {
     margin-top: 2px;
     width: 204px;
     height: 50px;
+}
+
+@media only screen and (max-width: 1080px) {
+    .targetParent {
+        width: 80%;
+        height: 40vw;
+    }
 }
