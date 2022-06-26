@@ -12,7 +12,6 @@ const clearButton = document.getElementById('clearButton')
 let moveHorizontal = 0
 let moveVertical = 0
 
-
 rightButton.addEventListener('mousedown', function() {
     let moveRight = setInterval(function() {
     if(moveHorizontal < 970) {
@@ -77,7 +76,9 @@ downButton.addEventListener('mousedown', function() {
     })
 })
 
-launchButton.addEventListener('click', function() {
+let cloneMap = targetParent.cloneNode(true)
+
+function placeTarget() {
     let nukeDrop = document.createElement('div')
     nukeDrop.style.left = (aimTarget.style.left)
     nukeDrop.style.top = (aimTarget.style.top)
@@ -88,10 +89,24 @@ launchButton.addEventListener('click', function() {
     nukeDrop.style.border = '10px solid orange'
     nukeDrop.style.position = 'absolute'
     nukeDrop.style.opacity = '0.8'
-    nukeDrop.id = 'droppedNuke'
+    nukeDrop.id = `droppedNuke`
     targetParent.appendChild(nukeDrop)
 
     clearButton.addEventListener('click', function() {
-        targetParent.removeChild(nukeDrop) // replace with blank?
+        try {
+        targetParent.removeChild(nukeDrop)
+        // hacky error handling
+        // result of console error due to issues with scope of function/event listener + removeChild
+        // to view error and attempt solution, comment out this code block, and uncomment code block below
+        } catch(error) {
+            return
+        }
     })
-})
+
+    // uncomment this code
+    // clearButton.addEventListener('click', function() {
+    //     targetParent.removeChild(nukeDrop)
+    // })
+}
+
+launchButton.addEventListener('click', placeTarget)
