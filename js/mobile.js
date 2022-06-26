@@ -3,9 +3,6 @@ const mobileRightClick = document.getElementById('rightButton')
 const mobileDownClick = document.getElementById('downButton')
 const mobileUpClick = document.getElementById('upButton')
 
-console.log((targetParent.offsetWidth) * 0.8)
-console.log(targetParent.offsetWidth)
-
 let mediaQuery = window.matchMedia('(max-width: 1080px')
 
 if (mediaQuery.matches) {
