@@ -76,8 +76,6 @@ downButton.addEventListener('mousedown', function() {
     })
 })
 
-let cloneMap = targetParent.cloneNode(true)
-
 function placeTarget() {
     let nukeDrop = document.createElement('div')
     nukeDrop.style.left = (aimTarget.style.left)
@@ -89,7 +87,7 @@ function placeTarget() {
     nukeDrop.style.border = '10px solid orange'
     nukeDrop.style.position = 'absolute'
     nukeDrop.style.opacity = '0.8'
-    nukeDrop.id = `droppedNuke`
+    nukeDrop.id = 'droppedNuke'
     targetParent.appendChild(nukeDrop)
 
     clearButton.addEventListener('click', function() {
